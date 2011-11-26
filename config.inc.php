@@ -13,13 +13,16 @@ ini_set('display_errors', 'On');
 
 $mypage = "facebook_sdk";
 //$REX['ADDON']['name'][$mypage] = 'Facebook API';
-$REX['ADDON']['version'][$mypage] = '3.1.0';
+$REX['ADDON']['version'][$mypage] = '3.1.1';
 $REX['ADDON']['author'][$mypage] = 'Markus Lorch / ITKULT';
 $REX['ADDON']['supportpage'][$mypage] = 'http://www.it-kult.de';
 $REX['ADDON']['basedir'][$mypage] = dirname(__FILE__);
 
+$REX['PERM'][] = $mypage.'[]';
+
 ## Include Class
-require_once $REX['ADDON']['basedir'][$mypage].'/classes/facebook.php';
+if(!class_exists('Facebook'))
+	include $REX['ADDON']['basedir'][$mypage].'/classes/facebook.php';
 
 /*
 //
