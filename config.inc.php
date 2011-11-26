@@ -18,8 +18,6 @@ $REX['ADDON']['author'][$mypage] = 'Markus Lorch / ITKULT';
 $REX['ADDON']['supportpage'][$mypage] = 'http://www.it-kult.de';
 $REX['ADDON']['basedir'][$mypage] = dirname(__FILE__);
 
-$REX['PERM'][] = $mypage.'[]';
-
 ## Include Class
 require_once $REX['ADDON']['basedir'][$mypage].'/classes/facebook.php';
 
